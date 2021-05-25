@@ -1,0 +1,38 @@
+﻿<Window x:Class="Online_store.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_store"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        MinWidth="450" MaxWidth="700" MinHeight="300" MaxHeight="500"
+        Title="Главная" Height="450" Width="701.6"
+        FontFamily="Century Gothic"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#35D4A4">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="MainLabel" FontSize="10" Foreground="#504d49" FontStyle="Italic" FontWeight="UltraBold">Онлайн магазин</Label>
+        <Button  x:Name="exit" Click="exit_Click" Foreground="#504d49" ToolTip="Закрыть" Grid.Row="0" Height="22" Width="30" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"  Margin="0,10,10,0">
+            <materialDesign:PackIcon Kind="ExitToApp" Height="22" Width="22" />
+        </Button>
+        <TextBlock  Grid.Column="0" Grid.Row="1"  FontWeight="UltraBold" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="25" FontStyle="Italic" Foreground="#504d49" Text="ВХОД">
+            <TextBlock.RenderTransform>
+                <TranslateTransform X="3" Y="1" />
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock  Grid.Column="1" Grid.Row="1"  FontWeight="UltraBold" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="25" FontStyle="Italic" Foreground="#504d49" Text="РЕГИСТРАЦИЯ">
+            <TextBlock.RenderTransform>
+                <TranslateTransform X="3" Y="1" />
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button FontWeight="UltraBold" FontStyle="Italic" x:Name="EntryButton" Content="ВХОД"  FontSize="25" Foreground="#E1d3c1" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" Grid.Row="1" Height="auto" Click="EntryButton_Click" Style="{StaticResource MaterialDesignRaisedLightButton}" />
+        <Button FontWeight="UltraBold" FontStyle="Italic" x:Name="RegistrationButton" Content="РЕГИСТРАЦИЯ"  FontSize="25" Foreground="#E1d3c1" Background="Transparent" BorderBrush="Transparent" Grid.Column="1" Grid.Row="1"  Height="auto" Click="RegistrationButton_Click"  Style="{StaticResource MaterialDesignRaisedLightButton}" />
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="Online_store.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_store"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="800" Width="800"  Background="#35D4A4" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button  x:Name="exit" Click="exit_Click" Foreground="#504d49" ToolTip="Закрыть" Grid.Row="0" Height="30" Width="30" Grid.Column="2" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}">
+            <materialDesign:PackIcon Kind="ExitToApp" Height="22" Width="22" />
+        </Button>
+        <Button  x:Name="back" Click="back_Click" Foreground="#504d49" ToolTip="Вернуться в главное меню" Grid.Row="0" Height="30" Width="30" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}">
+            <materialDesign:PackIcon Kind="ArrowBack" Height="22" Width="22" />
+        </Button>
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="РЕГИСТРАЦИЯ" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="33"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+
+            <StackPanel>
+                <Expander Name="First" HorizontalAlignment="Stretch" Header="Информация для авторизации" Background="#00A876">
+                    <StackPanel Orientation="Vertical" Margin="24,-15,24,10">
+                        <TextBox Name="myLogin" materialDesign:HintAssist.Hint="ЛОГИН" FontSize="16"/>
+                        <PasswordBox Name="mypass" materialDesign:HintAssist.Hint="ПАРОЛЬ" FontSize="16"/>
+                    </StackPanel>
+                </Expander>
+                <Border Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" Background="{DynamicResource MaterialDesignBackground}" />
+                <Expander Name="Second" HorizontalAlignment="Stretch" Header="Информация о пользователе" Background="#00A876">
+                    <StackPanel Orientation="Vertical" Margin="24,-15,24,10">
+                        <TextBox  Name="mySurname" materialDesign:HintAssist.Hint="ФАМИЛИЯ" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox  Name="myFirstname" materialDesign:HintAssist.Hint="ИМЯ" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox  Name="myPhone" ToolTip="Формат: +375ХХ1234567" materialDesign:HintAssist.Hint="МОБИЛЬНЫЙ ТЕЛЕФОН" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox  Name="myEmail" materialDesign:HintAssist.Hint="E-MAIL" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox  Name="myCardID" materialDesign:HintAssist.Hint="НОМЕР КАРТОЧКИ" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBlock Text="Информация о месте жительства" FontSize="16" TextAlignment="Center" Margin="0,20,0,0"/>
+                        <TextBox Name="myRegion" materialDesign:HintAssist.Hint="ОБЛАСТЬ" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox Name="myCity" materialDesign:HintAssist.Hint="ГОРОД" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox Name="myStreet" materialDesign:HintAssist.Hint="УЛИЦА" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox Name="myHouse" materialDesign:HintAssist.Hint="ДОМ" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <TextBox Name="myFlat" materialDesign:HintAssist.Hint="КВАРТИРА" FontSize="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  />
+                        <Button x:Name="Create" Content="СОЗДАТЬ" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignRaisedAccentButton}"   Width="150" Background="#504d49" Foreground="White" BorderBrush="#707870" Margin="0,5,5,0" materialDesign:RippleAssist.Feedback="white" Click="Create_Click"/>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
